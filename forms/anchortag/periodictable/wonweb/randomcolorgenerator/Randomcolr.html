@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <script>
+        function Demo()
+        {
+            // let a=document.querySelector("#abc")
+            // console.log(a)
+            let arr=['a','b','c','d','e','f',0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+            let color="#";
+            // console.log(arr.length)
+            let l=arr.length
+           
+           for( i=0;i<6;i++)
+           {
+            let b= Math.floor(Math.random()*l)
+           console.log(b)
+           
+           let c=arr[b]
+           console.log(c)
+           color+=c
+           console.log(color)
+           }
+           document.querySelector("body").style.backgroundColor=color
+           document.querySelector("#color").innerHTML=color
+            
+        }
+    </script>
+</head>
+<body>
+    <h1 id="abc" style="color:#1ead3a;">WELCOME TO RANDOM COLOR GENERATION</h1>
+    <h1 id="color"></h1>
+    <button onclick="Demo()">Submit</button>
+</body>
+</html>

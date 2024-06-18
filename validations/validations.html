@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            margin: 200px;
+            margin-left: 40px;
+            size: 40px;
+            border-radius: 70px;
+                    }
+        #parent {
+            width: 400px; /* Adjusted to a reasonable width */
+            height: 350px; /* Adjusted to a reasonable height */
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20%;
+          
+          
+        }
+
+        #parent-Name{
+            border-radius: 2px;
+        }
+        .ab{
+            border-radius: 10px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            height: 12px; /* Ensures space is reserved for the message */
+        }
+        .required::after {
+            content: " *";
+            color: red;
+        }
+      
+    </style>
+    <script>
+        function validations() {
+            let name = document.getElementById("name").value;
+            console.log(name);
+            let phone = document.getElementById("phone").value;
+            console.log(phone);
+            let email = document.getElementById("email").value;
+            console.log(email);
+            let nameError = document.getElementById("nameError");
+            let phoneError = document.getElementById("phoneError");
+            let emailError = document.getElementById("emailError");
+
+            // Name validation
+            if (name.trim() == "") {
+                alert("please enter required field")
+                nameError.textContent = "Name is required.";
+                document.getElementById("name").style.border = "2px solid red";
+            } else if (name.length > 3 && name.length <= 16) {
+                document.getElementById("name").style.border = "2px solid green";
+            } else {
+                document.getElementById("name").style.border = "2px solid red";
+                alert("please enter required field")
+            }
+
+            // Phone validation
+           let phonePattern = /^[0-9]{10}$/; // Example pattern for 10-digit phone number
+            if (phone.match(phonePattern)) {
+                document.getElementById("phone").style.border = "2px solid green";
+              
+            } else {
+                document.getElementById("phone").style.border = "2px solid red";
+                phoneError.textContent = "Phone must be a 10-digit number.";
+            }
+
+            // Email validation
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.match(emailPattern)) {
+                document.getElementById("email").style.border = "2px solid green";
+               
+            } else {
+                document.getElementById("email").style.border = "2px solid red";
+                emailError.textContent = "Invalid email format.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="parent">
+        <h1>Student Details</h1>
+<div class="ab">
+        <table>
+            <tr>
+                <td class="required">*Name</td>
+                <td><input type="text" id="name" placeholder="Enter name" style="border-radius: 8px;"><div id="nameError" class="error"></div></td>
+                
+            </tr>
+            <tr>
+                <td class="required">*Phone</td>
+                <td><input type="text" id="phone" placeholder="Enter Phone" style="border-radius: 8px;"> <div id="phoneError" class="error"></div></td>
+               
+            </tr>
+            <tr>
+                <td class="required">*Email</td>
+                <td><input type="text" id="email" placeholder="enterEmail" style="border-radius: 8px;"> <div id="emailError" class="error"></div></td>
+               
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <center>
+                        <button onclick="validations()">Submit</button>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+</html>

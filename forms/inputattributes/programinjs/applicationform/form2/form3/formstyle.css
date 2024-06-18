@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.container form {
+    width: 80%; /* Adjust the width as needed */
+    background-color: burlywood;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+  
+    background-color: burlywood;
+    padding: 10px;
+}
+
+.header-section {
+    flex: 1;
+    text-align: center;
+}
+
+.header-section h1 {
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 6%;
+}
+
+.Applications .input-group input {
+    flex: 1;
+    padding: 8px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.Applications .input-group input:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+

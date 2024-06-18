@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Demo()
+        {
+            let heading=document.querySelector("#h1").innerHTML
+            console.log(heading)
+            let p=document.querySelector("#p")
+            console.log(p)
+            p.innerHTML="welcome to innerhtml";
+            console.log(p)
+
+            let num=20
+        }
+    </script>
+</head>
+<body>
+    <h1 id="h1">WELCOME TO INNERHTML</h1>
+    <p id="p">obulesu</p>
+    <button onclick="Demo()">SUBMIT</button>
+</body>
+</html>

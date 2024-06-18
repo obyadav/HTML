@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementById Example</title>
+</head>
+<body>
+    <h1 id="header">Hello, World!</h1>
+
+    <script>
+        // JavaScript to get element by ID
+        var headerElement = document.getElementById("header");
+        console.log(headerElement); // Output: Hello, World!
+    </script>
+
+<title>getElementsByName Example</title>
+<input type="radio" name="gender" value="male"> Male<br>
+<input type="radio" name="gender" value="female"> Female<br>
+
+<script>
+    
+    var genderElements = document.documentgetElementsByName("gender");
+    for (var i = 0; i < genderElements.length; i++) {
+        console.log(genderElements[i].value); // Output: male, female
+    }
+</script>
+
+
+<p class="highlight">This is a highlighted paragraph.</p>
+<p class="highlight">This is another highlighted paragraph.</p>
+<p class="highlight">obulesu.</p>
+
+<script>
+    // JavaScript to get elements by class name
+    var Elements = document.getElementsByClassName("highlight");
+    for (var i = 0; i < highlightElements.length; i++) {
+        console.log(Elements[i]);
+    }
+    // Output: This is a highlighted paragraph.
+    //         This is another highlighted paragraph.
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
