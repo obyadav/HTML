@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            color:red;
+            background-color: blue;
+            text-shadow: 2px 2px 2px white;
+            padding: 20px;
+        }
+        .demo1{
+            font-size:90px;
+        }
+        .demo2{
+            color:aqua;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- classList Methods
+     add()
+     toggle()
+     remove()
+     replace()
+      -->
+
+      <h1 class="abc">WELCOME</h1>
+      <h1 class="abc">WELCOME</h1>
+      <h1 class="abc">WELCOME</h1>
+      <h1 class="abc">WELCOME</h1>
+      <button onclick="Demo()">Submit</button>
+
+      <script>
+        function Demo()
+        {
+        //    let a= document.querySelector(".abc")
+        //    a.style.color='red'
+        //    a.style.backgroundColor='orange'
+        //    a.style.textShadow='2px 2px 2px white'
+        //    a.style.padding='20px'
+        // console.log(a)
+
+        // a.classList.add("demo")
+    //     a.classList.toggle("demo1")
+    //     a.classList.toggle("demo")
+    //     a.classList.remove("demo1")
+    //    let b= a.classList.contains("abc1")
+    //    console.log(b)
+    //   a.classList.replace("demo","demo2")
+
+   let para= document.createElement("p")
+   console.log(para)
+   para.innerHTML='welcome to paragaph'
+   let body=document.querySelector("body")
+   body.append(para)
+   let img=document.createElement("img")
+   console.log(img)
+    img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3KLsKw0jLKi6EOWlMs2QnOvqlopxW-8i54w&s"
+    body.append(img)
+        }
+      </script>
+</body>
+</html>

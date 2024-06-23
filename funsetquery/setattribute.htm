@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .password{
+            width:200px;
+            height:30px;
+            border: 2px solid ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+        }
+        input{
+            padding-top:6px;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+     <h1 title="Good Evening">WELCOME TO ATTRIBUTE CONCEPTS</h1>
+    <button onclick="Demo()">Submit</button> 
+     <i class="fa-sharp fa-solid fa-eye-slash"></i> 
+
+    <div class="password">
+        <input type="password" placeholder="Enter Password" id="inp"><i class="fa-solid fa-eye" id="eye" onclick="Pass()"></i>
+    </div>
+
+    <script>
+         function Demo()
+         {
+            let h1= document.querySelector("h1").getAttribute("title")
+            console.log(h1)
+           document.querySelector("h1").setAttribute("id","123abc")
+          console.log(document.querySelector("h1"))
+          document.querySelector("h1").removeAttribute("title")
+
+        }
+
+        function Pass()
+        {
+            let inp=document.querySelector("#inp").getAttribute("type")
+            console.log(inp)
+           
+
+            if(inp=="password")
+            {
+                document.querySelector("#inp").setAttribute("type","text")
+                document.querySelector("#eye").setAttribute("class","fa-sharp fa-solid fa-eye-slash")
+            }
+            else{
+                document.querySelector("#inp").setAttribute("type","password")
+                document.querySelector("#eye").setAttribute("class","fa-solid fa-eye")
+            }
+        }
+    </script>
+</body>
+</html>

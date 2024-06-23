@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for ="">*EnterNAme</label><input type="text" id="inp">
+    <button onclick="Demo()" >subbmit</button>
+   <h1 id="abc"></h1>
+   <h1>Good evening</h1> 
+
+
+   <script>
+function Demo()
+{
+    let ele= document.getElementById("inp").value  //used for input,dropdown, datalist
+    console.log(ele) //input id="inp" store in ele variuable
+    let heading= document.getElementById("abc")
+  //id="abc"
+    console.log(heading)
+    //inner html property
+    heading.innerHTML=ele  //assign or retrive data in jas
+    let element=document.getElementById("h1").innerHTML
+    console.log(element)
+}
+
+
+   </script>
+</body>
+</html>

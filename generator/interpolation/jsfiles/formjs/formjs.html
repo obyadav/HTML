@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function obulesu() {
+            // Get values from input fields
+            let nameValue = document.getElementById("name").value;
+            let contactValue = document.getElementById("contact").value;
+            let ageValue = document.getElementById("age").value;
+
+            // Log values to the console
+            console.log(nameValue);
+            console.log(contactValue);
+            console.log(ageValue);
+
+            // Update innerHTML of elements (if required)
+          let c=  document.getElementById("name").innerHTML = nameValue;
+          console.log(c)
+          let d=  document.getElementById("contact").innerHTML = contactValue;
+       console.log(d)
+          let e=  document.getElementById("age").innerHTML = ageValue;
+          e.innerHTML
+          console.log(e)
+        }
+    </script>
+</head>
+<body>
+    <h1 id="e">This is Obulesu</h1>
+    <form>
+        <label for="name">Enter Name</label>
+        <input type="text" id="name"><br>
+        
+        <label for="contact">Enter Phone</label>
+        <input type="text" id="contact"><br>
+        
+        <label for="age">Age</label>
+        <input type="text" id="age"><br>
+        
+        <button type="button" onclick="obulesu()">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0; */
+            /* padding: 0; */
+        }
+       body {
+           background-color: aliceblue;
+       }
+       #parent {
+           width: 100%;
+           height: 300px;
+       }
+       #div {
+           width: 100%;
+           display: flex;
+           flex-wrap: wrap;
+           justify-content:center;
+           align-items: flex-start; /* Align items to the top of each column */
+       }
+       .row {
+           width:85%;
+           display: flex;
+           justify-content: space-around;
+           margin-bottom: 20px; /* Space between rows */
+       }
+       .data {
+           width: 20%;
+           height: auto;
+           background-color: #ffffff;
+           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+           font-weight: bold;
+           font-size: medium;
+           border-radius: 4%;
+           margin-bottom: 10px; /* Space between items */
+           text-align: center;
+
+           cursor: pointer;
+       }
+       .data:hover{
+        transform:scale(1.09,1.09);
+       }
+       .nav,.sub-nav{
+        width:100%;
+        height:80px;
+        background-color: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        margin-top:1%;
+       }
+       .nav h2{
+         padding-left: 5%;
+         padding-top: 2%;
+       }
+       .sub-nav{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+       }
+       #inp{
+        width:60%;
+        height:40px;
+       }
+       select{
+        width:15%;
+        height: 40px;
+       }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>Where in the world?</h2>
+    </div>
+    
+    <div class="sub-nav">
+        <input type="text" placeholder="Search for Country" id="inp">
+        <select name="" id=" " >
+            <option value="">Filter by region</option>
+            <option value="">abc</option>
+            <option value="">djfkdjf</option>
+            <option value="">dfedfj</option>
+            <option value="">dfjksdjfks</option>
+        </select>
+    </div>
+    <br>
+    <div id="parent">
+        <div id="div"></div>
+    </div>
+    <script>
+        fetch("country.json")
+            .then(res => res.json())
+            .then(data => {
+                let div = document.getElementById("div");
+                let countries = data.slice(0, 12); // Take only the first 12 countries
+
+                let currentRow;
+                countries.forEach((country, index) => {
+                    if (index % 4 === 0) {
+                        // Start a new row for every 4th item
+                        currentRow = document.createElement("div");
+                        currentRow.classList.add("row");
+                        div.appendChild(currentRow);
+                    }
+
+                    let countryDiv = document.createElement("div");
+                    countryDiv.classList.add("data");
+                    countryDiv.innerHTML = `
+                        <img src="${country.image}" style="width:100%; height: 120px;">
+                        <p>${country.country}</p>
+                        <p>${country.population}</p>
+                        <p>${country.region}</p>
+                        <p>${country.captial}</p>
+                    `;
+                    currentRow.appendChild(countryDiv);
+                });
+            })
+            .catch(err => console.error("Error fetching data:", err));
+    </script>
+</body>
+</html>
