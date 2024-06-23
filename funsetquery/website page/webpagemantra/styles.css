@@ -1,0 +1,124 @@
+.header-icons {
+    color: black;
+
+    border-radius: 0;
+    align-items: center;
+    display: flex;
+    margin-left: 0%;
+    box-sizing: border-box 1%;
+    padding: 29px;
+    background-color: skyblue;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+.header-icons {
+    display: flex;
+    gap: 15px;
+    color: black;
+}
+
+.header-icons a {
+    color:black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+header {
+    background: aquamarine;
+    color: #352525;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    
+}
+h1 img{
+    size: width 10%;
+    size: height 10%;
+    margin :left -5%;
+    image-resolution: 3%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#hero h2 {
+    margin: 0 0 1rem;
+    background-color: chocolate;
+}
+
+section {
+    padding: 2rem 1rem;
+    background-color: white;
+}
+
+section h2 {
+    text-align: center;
+    color: #333;
+    background-color: yellow;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+    background-color: brown;
+}
+
+section ul li {
+    margin: 0.5rem 0;
+    text-align: center;
+    background-color: green;
+}
+
+section#company p {
+    text-align: center;
+    background-color: violet;
+}
+
+section#contact address {
+    text-align: center;
+    font-style: normal;
+    background-color: bisque;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: thistle;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
